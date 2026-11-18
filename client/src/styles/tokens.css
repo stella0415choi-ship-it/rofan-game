@@ -1,0 +1,54 @@
+/* UI 시안에서 확정한 색·폰트. 화면 스타일은 여기 변수만 가져다 쓴다. */
+:root {
+  --font-body: 'Hahmlet', serif;
+  --font-title: 'Song Myung', serif;
+  --font-label: 'Cinzel Decorative', serif;
+
+  --gold: #c9a24b;
+  --gold-dark: #b8902f;
+  --gold-light: #e8cf8a;
+}
+
+/* 낮: 버건디 + 아이보리 + 골드 */
+body[data-theme='day'] {
+  --bg: #fbf2df;
+  --sunk: #f1e3c2;
+  --mat: #4a0a18;
+  --accent: #8e1b2e;
+  --accent-deep: #5e0e20;
+  --text: #2e0a12;
+  --on-accent: #fbefc8;
+}
+
+/* 밤: 딥 네이비 + 골드 */
+body[data-theme='night'] {
+  --bg: #0b1230;
+  --sunk: #060a1c;
+  --mat: #070b22;
+  --accent: #1e2e78;
+  --accent-deep: #141f55;
+  --text: #f6eedb;
+  --on-accent: #f6e7b4;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-body);
+  word-break: keep-all;
+  transition: background 0.3s, color 0.3s;
+}
+
+h1,
+h2,
+h3,
+button {
+  font-family: var(--font-title);
+  font-weight: 400;
+}
